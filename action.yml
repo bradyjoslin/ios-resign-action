@@ -1,0 +1,29 @@
+name: 'iOS Resign'
+description: 'Resign iOS ipa'
+inputs:
+  csproj_path:
+    description: 'Path to ipa file'
+    required: true
+  mobileprovision:
+    description: 'Base64 representation of your mobile provisioning file'
+    required: true
+  cert_p12:
+    description: 'Base64 representation p12 distribution cert'
+    required: true
+  p12_pass:
+    description: 'Password used when exporting p12 distribution cert from keychain'
+    required: true
+  signing_identity:
+    description: "iOS Signing identity"
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/resign.sh
+      env:
+          CSPROJ_PATH: ${{ github.workspace }}/${{ inputs.ipa_path }}
+          MOBILEPROVISION: ${{ inputs.mobileprovision }}
+          CERT_P12: ${{ inputs.cert_p12 }}
+          P12_PASS: ${{ inputs.p12_pass }}
+          signing_identity: ${{ inputs.SIGNING_IDENTITY }}
+      shell: bash
