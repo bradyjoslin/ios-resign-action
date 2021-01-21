@@ -17,7 +17,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: bradyjoslin/xamarinios-signedbuild-action@v1
+      - uses: bradyjoslin/ios-resign-action@v1
         with:
           ipa_path: ./sample.ipa
           mobileprovision: ${{ secrets.MOBILEPROVISION }}
