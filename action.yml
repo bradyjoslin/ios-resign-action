@@ -25,5 +25,5 @@ runs:
           MOBILEPROVISION: ${{ inputs.mobileprovision }}
           CERT_P12: ${{ inputs.cert_p12 }}
           P12_PASS: ${{ inputs.p12_pass }}
-          signing_identity: ${{ inputs.SIGNING_IDENTITY }}
+          SIGNING_IDENTITY: ${{ inputs.signing_identity }}
       shell: bash
