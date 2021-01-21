@@ -1,4 +1,4 @@
-# iOS Resign GitHub Action [WIP]
+# iOS Resign GitHub Action
 
 Resigns `ipa` files using GitHub Actions.
 
