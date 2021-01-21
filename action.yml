@@ -1,7 +1,7 @@
 name: 'iOS Resign'
 description: 'Resign iOS ipa'
 inputs:
-  csproj_path:
+  ipa_path:
     description: 'Path to ipa file'
     required: true
   mobileprovision:
@@ -21,7 +21,7 @@ runs:
   steps:
     - run: ${{ github.action_path }}/resign.sh
       env:
-          CSPROJ_PATH: ${{ github.workspace }}/${{ inputs.ipa_path }}
+          IPA_PATH: ${{ github.workspace }}/${{ inputs.ipa_path }}
           MOBILEPROVISION: ${{ inputs.mobileprovision }}
           CERT_P12: ${{ inputs.cert_p12 }}
           P12_PASS: ${{ inputs.p12_pass }}
