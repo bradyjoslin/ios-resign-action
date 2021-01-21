@@ -7,7 +7,7 @@ Resigns `ipa` files using GitHub Actions.
 Example usage in a worfklow:
 
 ```yaml
-name: Build
+name: Resign
 
 on: workflow_dispatch
 
