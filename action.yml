@@ -1,5 +1,8 @@
 name: 'iOS Resign'
 description: 'Resign iOS ipa'
+branding:
+  icon: 'activity'
+  color: 'white'
 inputs:
   ipa_path:
     description: 'Path to ipa file'
