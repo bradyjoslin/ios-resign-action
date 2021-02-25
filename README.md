@@ -1,6 +1,6 @@
 # iOS Resign GitHub Action
 
-Resigns `ipa` files using GitHub Actions.
+Resigns `ipa` files using GitHub Actions with [fastlane](https://fastlane.tools/).
 
 ## Usage
 
